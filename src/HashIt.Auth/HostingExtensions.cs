@@ -1,8 +1,13 @@
 using Duende.IdentityServer.EntityFramework.Services;
 using Duende.IdentityServer.EntityFramework.Stores;
 using Duende.IdentityServer.Services;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Serilog;
+using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 /// <summary>
 /// Used for configuring the web host.
@@ -18,7 +23,15 @@ public static class HostingExtensions
     {
         Log.Information("Configuring application services");
 
-        builder.Services.AddControllers();
+        builder.Services.AddControllers()
+            .AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                options.JsonSerializerOptions.NumberHandling = JsonNumberHandling.Strict;
+                options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+                options.JsonSerializerOptions.DictionaryKeyPolicy = JsonNamingPolicy.CamelCase;
+            });
+
         builder.Services.AddEndpointsApiExplorer();
 
         // Configure caching
@@ -86,7 +99,11 @@ public static class HostingExtensions
 
         app.UseAuthorization();
 
-        app.MapHealthChecks("/health");
+        app.MapHealthChecks("/health", new HealthCheckOptions()
+        {
+            AllowCachingResponses = false,
+            ResponseWriter = (ctx, report) => ctx.Response.WriteAsJsonAsync(new HealthCheckModel(report))
+        });
 
         app.MapControllers();
 
