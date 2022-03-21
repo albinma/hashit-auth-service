@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C1786B15-F5EF-4F25-A971-05CCD842C37D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashIt.Auth", "src\HashIt.Auth\HashIt.Auth.csproj", "{BECC5609-05E7-4FDD-97C9-059C98FCFE7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FAD4A0FD-DB3A-4968-99BB-E6DA4260D4E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashIt.Auth.FunctionalTests", "test\HashIt.Auth.FunctionalTests\HashIt.Auth.FunctionalTests.csproj", "{4E649819-B9D3-4F86-B7F4-5AD13A00B73D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashIt.Auth.UnitTests", "test\HashIt.Auth.UnitTests\HashIt.Auth.UnitTests.csproj", "{49112833-4DE0-4F42-B15C-6602F13BEC97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BECC5609-05E7-4FDD-97C9-059C98FCFE7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BECC5609-05E7-4FDD-97C9-059C98FCFE7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BECC5609-05E7-4FDD-97C9-059C98FCFE7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BECC5609-05E7-4FDD-97C9-059C98FCFE7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E649819-B9D3-4F86-B7F4-5AD13A00B73D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E649819-B9D3-4F86-B7F4-5AD13A00B73D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E649819-B9D3-4F86-B7F4-5AD13A00B73D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E649819-B9D3-4F86-B7F4-5AD13A00B73D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49112833-4DE0-4F42-B15C-6602F13BEC97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49112833-4DE0-4F42-B15C-6602F13BEC97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49112833-4DE0-4F42-B15C-6602F13BEC97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49112833-4DE0-4F42-B15C-6602F13BEC97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BECC5609-05E7-4FDD-97C9-059C98FCFE7D} = {C1786B15-F5EF-4F25-A971-05CCD842C37D}
+		{4E649819-B9D3-4F86-B7F4-5AD13A00B73D} = {FAD4A0FD-DB3A-4968-99BB-E6DA4260D4E9}
+		{49112833-4DE0-4F42-B15C-6602F13BEC97} = {FAD4A0FD-DB3A-4968-99BB-E6DA4260D4E9}
+	EndGlobalSection
+EndGlobal

@@ -3,6 +3,11 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Development files
+*.Development.json
+.jwk
+
+
 # User-specific files
 *.rsuser
 *.suo
@@ -348,3 +353,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# MacOS Finder .DS_Store file
+.DS_Store
